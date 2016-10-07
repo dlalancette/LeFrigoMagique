@@ -1,0 +1,3 @@
+-Mettre tous les scripts SQL
+-Mettre tous les dessins de modelisation de la base
+-Mettre tout le code PHP fait ici
