@@ -1,8 +1,7 @@
-<?php
-include 'header.php';
-?>
+<?php include 'header.php'; ?>
 
 <div class="container">
     <h1>NOUS CONTACTER </h1>
-
 </div>
+
+<?php include 'footer.php'; ?>

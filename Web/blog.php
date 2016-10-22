@@ -1,6 +1,4 @@
-<?php
-include 'header.php';
-?>
+<?php include 'header.php'; ?>
 <div class="container">
     <div class="blog-header">
         <h1 class="blog-title">The Bootstrap Blog</h1>
@@ -114,4 +112,5 @@ include 'header.php';
     </div><!-- /.row -->
 
 </div>
-    <?php include 'footer.php'; ?>
+
+<?php include 'footer.php'; ?>
