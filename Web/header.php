@@ -13,9 +13,9 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/jumbotron-narrow.css" rel="stylesheet" />
-    <link href="css/justified-nav.css" rel="stylesheet" />
-    <link href="signin.css" rel="stylesheet" />
-    <link href="blog.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/signin.css" rel="stylesheet" />
+    <link href="css/blog.css" rel="stylesheet" />
 
 
 
@@ -27,7 +27,7 @@
     <![endif]-->
 </head>
 <body> 
-    <div class="container">
+    <div class="container-fluid">
      <?php require 'menu.php';?>
     </div>
 </body>
