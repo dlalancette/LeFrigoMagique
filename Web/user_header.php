@@ -1,4 +1,7 @@
-<?php require('functions.php');?>
+<?php 
+session_start(); 
+require('config.php')
+?>
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,7 +18,6 @@
     <link href="css/jumbotron-narrow.css" rel="stylesheet" />
     <link href="navbar-static-top.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
-    <link href="css/signin.css" rel="stylesheet" />
 
 </head>
 <body> 
@@ -33,26 +35,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Le Frigo Magique</a>
+                <span class="navbar-brand">BIENVENUE</span>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="blog.php">Blog</a>
+                        <a class="navbar-brand" href="user.php"><?= $_SESSION['firstname']; ?></a>
+                    </li>
+
+                </ul>
+                <!--Si pas connecter afficher les boutons insciption et connexion. 
+                    Si connecter afficher un menu dropdown avec les fonctionnailité inventaire, recette deconnexion, etc.
+                -->
+                <ul class="nav nav-tabs navbar-nav navbar-right">
+                    <li>
+                        <a class="glyphicon glyphicon-cog" href="user_setting.php"></a>
                     </li>
                     <li>
-                        <a href="contact.php">Contact</a>
-                    </li>
-                </ul>
-   
-                <ul class="nav nav-tabs navbar-nav navbar-right">
-                    <li role="presentation">
-                        <a class="glyphicon glyphicon-pencil" href="register.php"></a>
-                    </li>
-                    <li role="presentation">
-                        <a class="glyphicon glyphicon-log-in" href="login.php"></a>
+                        <a class="glyphicon glyphicon-log-out" href="logout.php"></a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
