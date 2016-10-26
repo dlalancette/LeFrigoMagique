@@ -1,0 +1,23 @@
+/*STRUCTURE PAGE D'ACCEUIL*/
+header.php (meta, head, menu)
+index.php
+footer.php
+
+/*PAGE*/
+index.php
+blog.php
+contact.php
+
+/*TOUTEs FONCTIONs*/
+functions.php
+
+/*CONNEXION ET INSCRIPTION*/
+login.php
+registrer.php
+config.php (changer utilisateur, password, base de données si nécessaire)
+logout.php
+
+/*USAGER FONCTIONNALITÉ*/
+user.php (Page d'acceuil pour un utilisateur) (À compléter)
+user_header.php (À faire)(Doit inclure head et metadonné + menu utilisateur)eader.php (head, meta, menuE PRESENTATION*/
+...(le reste)
