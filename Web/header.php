@@ -13,9 +13,9 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/jumbotron-narrow.css" rel="stylesheet" />
+    <link href="navbar-static-top.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/signin.css" rel="stylesheet" />
-    <link href="css/blog.css" rel="stylesheet" />
 
 </head>
 <body> 
@@ -23,7 +23,7 @@
         Multiple lines will require custom code not provided by Bootstrap. -->
 <div class="masthead">
     <!--<h3 class="text-muted">Le Frigo Magique</h3>-->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -46,12 +46,13 @@
                         <a href="contact.php">Contact</a>
                     </li>
                 </ul>
-                <!--Si pas connecter afficher les boutons insciption et connexion. 
-                    Si connecter afficher un menu dropdown avec les fonctionnailité inventaire, recette deconnexion, etc.
-                -->
-                <ul class="nav navbar-right">
-                    <li>
-                        <a href="login.php">Connexion</a>
+   
+                <ul class="nav nav-tabs navbar-nav navbar-right">
+                    <li role="presentation">
+                        <a class="glyphicon glyphicon-pencil" href="register.php"></a>
+                    </li>
+                    <li role="presentation">
+                        <a class="glyphicon glyphicon-log-in" href="login.php"></a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

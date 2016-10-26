@@ -7,12 +7,7 @@ include('config.php');
 
 if(!empty($_SESSION['loggedin']) && !empty($_SESSION['username']))
 {
-     redirect("user.php");    ?>
-        
-     <h1>Member Area</h1>
-     <p>Thanks for logging in! You are <code><?=$_SESSION['username']?></code>.</p>
-      
-     <?php
+     redirect("user.php"); 
 }
 elseif(!empty($_POST['username']) && !empty($_POST['password']))
 {
@@ -23,13 +18,22 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
     
     if(mysqli_num_rows($checklogin) == 1)
     {
+        //Prendre les informations dans la base de données pour la personne qui se connecte.
         $row = mysqli_fetch_array($checklogin);
+        $firstname = $row['FirstName'];
+        $nameuser = $row['NameUser'];
         $email = $row['Email'];
-         
+        $mypassword = $row['Password'];
+        
+        //Accès au prenom, nom, email, nom d'usager, mot de passe.
         $_SESSION['username'] = $username;
+        $_SESSION['firstname'] = $firstname;
+        $_SESSION['nameuser'] = $nameuser;
+        $_SESSION['email'] = $email;
+        $_SESSION['password'] = $mypassword;
         $_SESSION['loggedin'] = 1;
          
-        echo "<h1>Succes</h1>";
+        echo "<h1>Succès</h1>";
         echo "<p>Nous vous redirigeons vers votre frigo</p>";
         echo "<meta http-equiv='refresh' content='2;user.php' />";
     }
@@ -59,51 +63,5 @@ else
      
    <?php
 }
-/*
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    //username and password sent from form
-
-    $myusername = mysqli_real_escape_string($conn,$_POST['username']);
-    $mypassword = mysqli_real_escape_string($conn,$_POST['password']);
-
-    $sql = "SELECT * FROM users WHERE UserName = '$myusername' AND Password = '$mypassword'";
-
-    if ($result = mysqli_query($conn, $sql)) {
-        
-        $row = mysqli_fetch_array($result, MYSQL_ASSOC);
-        $active = $row['active'];
-        $count = mysqli_num_rows($result);
-
-        if($count == 1){
-            session_register("UserName");
-            $_SESSION['login_user'] = $myusername;
-            redirect("welcome.php");
-        } else {
-            $error = "Votre nom d'usager ou votre mot de passe sont invalide";
-        }
-
-    } else {
-        echo "FAILURE";
-    }
-
-
-    //$result = mysqli_query($conn,$sql);
-   //$row = mysqli_fetch_array($result, MYSQL_ASSOC);
-    //$active = $row['active'];
-
-    //$count = mysqli_num_rows($result);
-
-    //if result matched $username and $password, table row must be 1 row
-
-    //if($count == 1){
-     //   session_register("username");
-    //    $_SESSION['login_user'] = $myusername;
-   
-    //    header("location: welcome.php");
-    //} else {
-    //    $error = "Your Login Name or Password is invalid";
-    //}
-}
-*/
 ?>
 <?php include 'footer.php'; ?>
