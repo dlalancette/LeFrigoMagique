@@ -3,8 +3,7 @@
 <body>
     <div class="container">
         <footer class="footer">
-            <p align="center">___________________________________________________</p>
-            <p>&copy; 2016 Le Frigo Magique Inc.</p>
+        <p>&copy; 2016 Le Frigo Magique Inc.</p>
 
         <ul>
             <li>

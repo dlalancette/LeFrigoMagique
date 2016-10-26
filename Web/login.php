@@ -40,7 +40,7 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
     else
     {
         echo "<h1>Erreur</h1>";
-        echo "<p>Desoler, votre compte ne peut être trouve. SVP <a href=\"index.php\">cliquer ici pour essayer de nouveau</a>.</p>";
+        echo "<p>Desoler, votre compte ne peut être trouve. SVP <a href=\"login.php\">cliquer ici pour essayer de nouveau</a>.</p>";
     }
 }
 else
