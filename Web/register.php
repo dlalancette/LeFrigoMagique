@@ -15,7 +15,11 @@ $mypassword = $_POST['password'];
 
 $sql = "INSERT INTO users (UserName, NameUser, FirstName, Email, Password) VALUE ('$myusername', '$mynameuser', '$myfirstname', '$myemail', '$mypassword')";
 
-if ($conn->query($sql) === TRUE) {
+//RELIER DEUX TABLE ENSEMBLE???
+
+$sql_fridge = "INSERT INTO fridge (IdUser, NameFridge, Description) VALUE ('$myiduser', 'Frigo-par-defaut', 'Inventaire alimentaire')";
+
+if ($conn->query($sql) === TRUE && $conn->query($sql_fridge) === TRUE) {
     redirect("login.php");
 } else {
     $message="L'inscription n'a pas fonctionne";

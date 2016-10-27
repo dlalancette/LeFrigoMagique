@@ -1,1 +1,3 @@
-﻿
+﻿ul.nav li a:hover, ul.nav li a:active {
+  color: #449D44 !important;
+}

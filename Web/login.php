@@ -15,6 +15,8 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
     $password = mysqli_real_escape_string($conn, $_POST['password']);
      
     $checklogin = mysqli_query($conn, "SELECT * FROM users WHERE UserName = '$username' AND Password = '$password'");
+
+    $checkfridge = mysqli_query($conn, "SELECT * FROM fridge");
     
     if(mysqli_num_rows($checklogin) == 1)
     {
@@ -24,14 +26,26 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
         $nameuser = $row['NameUser'];
         $email = $row['Email'];
         $mypassword = $row['Password'];
-        
+        $iduser = $row['IdUser'];
+
         //Accès au prenom, nom, email, nom d'usager, mot de passe.
         $_SESSION['username'] = $username;
         $_SESSION['firstname'] = $firstname;
         $_SESSION['nameuser'] = $nameuser;
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $mypassword;
+        $_SESSION['iduser'] = $iduser;
         $_SESSION['loggedin'] = 1;
+
+        //Même chose que pour le Frigo
+        $rowFridge = mysqli_fetch_array($checkfridge);
+        $idfridge = $rowFridge['IdFridge'];
+        $namefridge = $rowFridge['NameFridge'];
+        $description = $rowFridge['Description'];
+        
+        $_SESSION['idfridge'] = $idfridge;
+        $_SESSION['namefridge'] = $namefridge;
+        $_SESSION['description'] = $description;
          
         echo "<h1>Succès</h1>";
         echo "<p>Nous vous redirigeons vers votre frigo</p>";
