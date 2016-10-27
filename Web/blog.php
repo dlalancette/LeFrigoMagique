@@ -1,4 +1,5 @@
-<?php include 'header.php'; ?>
+<?php require ('header.php'); ?>
+
 <div class="container">
     <div class="blog-header">
         <h1 class="blog-title">The Bootstrap Blog</h1>

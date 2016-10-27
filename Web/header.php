@@ -13,18 +13,14 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/jumbotron-narrow.css" rel="stylesheet" />
-    <link href="navbar-static-top.css" rel="stylesheet">
+    <link href="css/navbar-static-top.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/signin.css" rel="stylesheet" />
 
 </head>
 <body> 
-    <!-- The justified navigation menu is meant for single line per list item.
-        Multiple lines will require custom code not provided by Bootstrap. -->
-<div class="masthead">
-    <!--<h3 class="text-muted">Le Frigo Magique</h3>-->
     <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -38,7 +34,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav nav-tabs navbar-nav">
                     <li>
                         <a href="blog.php">Blog</a>
                     </li>
@@ -48,16 +44,21 @@
                 </ul>
    
                 <ul class="nav nav-tabs navbar-nav navbar-right">
-                    <li role="presentation">
-                        <a class="glyphicon glyphicon-pencil" href="register.php"></a>
+                    <li>
+                        <a class="glyphicon glyphicon-pencil" href="register.php" data-toggle="tooltip" data-placement="bottom" title="Inscription"></a>
                     </li>
-                    <li role="presentation">
-                        <a class="glyphicon glyphicon-log-in" href="login.php"></a>
+                    <li>
+                        <a class="glyphicon glyphicon-log-in" href="login.php" data-toggle="tooltip" data-placement="bottom" title="Connexion"></a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.js"></script>
+            <script src="js/bootstrap.min.js"></script>
         </div><!-- /.container-fluid -->
     </nav>
-</div>
+
 </body>
 

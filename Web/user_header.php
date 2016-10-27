@@ -47,13 +47,18 @@ require('functions.php');
                 </ul>
                 <ul class="nav nav-tabs navbar-nav navbar-right">
                     <li>
-                        <a class="glyphicon glyphicon-cog" href="user_setting.php"></a>
+                        <a class="glyphicon glyphicon-cog" href="user_setting.php" data-toggle="tooltip" data-placement="bottom" title="Paramètres"></a>
                     </li>
                     <li>
-                        <a class="glyphicon glyphicon-log-out" href="logout.php"></a>
+                        <a class="glyphicon glyphicon-log-out" href="logout.php" data-toggle="tooltip" data-placement="bottom" title="Déconnexion"></a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.js"></script>
+            <script src="js/bootstrap.min.js"></script>
         </div><!-- /.container-fluid -->
     </nav>
 </div>
