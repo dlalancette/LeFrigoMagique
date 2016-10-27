@@ -7,15 +7,15 @@ include('config.php');
 
 if(!empty($_SESSION['loggedin']) && !empty($_SESSION['username']))
 {
-     redirect("user.php"); 
+     redirect("home.php");
 }
 elseif(!empty($_POST['username']) && !empty($_POST['password']))
 {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
-     
-    $checklogin = mysqli_query($conn, "SELECT * FROM users WHERE UserName = '$username' AND Password = '$password'");
-    
+
+    $checklogin = mysqli_query($conn, "SELECT * FROM tblusers WHERE UserName = '$username' AND Password = '$password'");
+
     if(mysqli_num_rows($checklogin) == 1)
     {
         //Prendre les informations dans la base de données pour la personne qui se connecte.
@@ -24,7 +24,7 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
         $nameuser = $row['NameUser'];
         $email = $row['Email'];
         $mypassword = $row['Password'];
-        
+
         //Accès au prenom, nom, email, nom d'usager, mot de passe.
         $_SESSION['username'] = $username;
         $_SESSION['firstname'] = $firstname;
@@ -32,10 +32,8 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $mypassword;
         $_SESSION['loggedin'] = 1;
-         
-        echo "<h1>Succès</h1>";
-        echo "<p>Nous vous redirigeons vers votre frigo</p>";
-        echo "<meta http-equiv='refresh' content='2;user.php' />";
+
+        redirect("home.php");
     }
     else
     {

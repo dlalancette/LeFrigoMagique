@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "Exemple_Symfony", "exemple_symfony\Exemple_Symfony.phpproj", "{EC8F026A-5D64-42B5-906D-AF5E380FCFF1}"
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "Example_Symfony", "exemple_symfony\Example_Symfony.phpproj", "{EC8F026A-5D64-42B5-906D-AF5E380FCFF1}"
 EndProject
-Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "Exemple_BootStrap", "exemple_bootstrap\Exemple_BootStrap.phpproj", "{6D585DFC-9BEB-4BB4-AC36-DED976EDB14F}"
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "Example_BootStrap", "exemple_bootstrap\Example_BootStrap.phpproj", "{6D585DFC-9BEB-4BB4-AC36-DED976EDB14F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

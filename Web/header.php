@@ -16,6 +16,9 @@
     <link href="navbar-static-top.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/signin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/Style2.css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.select2.js"></script>
 
 </head>
 <body> 
