@@ -1,3 +1,37 @@
-﻿ul.nav li a:hover, ul.nav li a:active {
+﻿#container {
+    margin: 20px auto;
+    position: relative;
+}
+
+#s2id_lstIngredients {
+    margin: 0 auto;
+    width: 70% !important;
+    display: block !important;
+}
+
+#signature {
+    text-align:center;
+}
+
+.elem {
+    margin: 0 auto;
+    width: auto !important;
+    text-align: center;
+}
+
+.elemHeader {
+    margin: 0 auto;
+    width: 70% !important;
+}
+
+#divSearchButton {
+    text-align: center;
+}
+
+#divSearchButton > * {
+    display: inline !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
   color: #449D44 !important;
 }
