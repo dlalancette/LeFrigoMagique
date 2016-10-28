@@ -8,7 +8,7 @@
             <div class="jumbotron">
                 <div class="contrainer">
                     <h1>Recettes conseillées</h1>
-                    <p class="lead">Choississez les alimentsque vous aimeriez manger, on se charge de trouverla meilleur recettes pour vous</p>
+                    <p class="lead">Choississez les aliments que vous aimeriez manger, on se charge de trouver la meilleur recettes pour vous</p>
                 </div>
              </div>
                  <div class="col-lg-6">
