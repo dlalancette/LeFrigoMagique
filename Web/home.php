@@ -7,8 +7,6 @@
     <body>
 
         <?php 
-            include('header.php');
-            include('config.php');
             include('user.php');
 
             $lstIngr = mysqli_query($conn, "SELECT *
@@ -41,7 +39,7 @@
 
             <div id="divSearchButton">
                 <input type="button" id="btnSearch" class="elem form-control" value="Rechercher" />
-                <h4 class="elem">Ou chercher à partir du frigo....</h4>
+                <h4 class="elem">Ou chercher Ã  partir du frigo....</h4>
                 <input type="button" id="btnSearchFrigo" class="elem form-control" value="Frigo" />
             </div>
 
