@@ -13,7 +13,7 @@ $myfirstname = $_POST['firstname'];
 $myemail = $_POST['email'];
 $mypassword = $_POST['password'];
 
-$sql = "INSERT INTO users (UserName, NameUser, FirstName, Email, Password) VALUE ('$myusername', '$mynameuser', '$myfirstname', '$myemail', '$mypassword')";
+$sql = "INSERT INTO tblusers (UserName, NameUser, FirstName, Email, Password) VALUE ('$myusername', '$mynameuser', '$myfirstname', '$myemail', '$mypassword')";
 
 if ($conn->query($sql) === TRUE) {
     redirect("login.php");
