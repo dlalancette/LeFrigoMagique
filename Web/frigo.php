@@ -6,7 +6,13 @@
     <body>
            <div class="container">
              
-                 <h1 class="text-center">Inventaire du frigo</h1>
+                 
+                    <div class="jumbotron">
+                        <div class="contrainer">
+                            <h1>Mon Frigo</h1>
+                            <p class="lead">Ici vous pouvez voir la conposition de votre réfrigérateur, ainsi que les dates de péremption de chaques aliments.</p>
+                        </div>
+                      </div>
                <div class="row marketing">
                   
                      <div class="col-lg-6">
