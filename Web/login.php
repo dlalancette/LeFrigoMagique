@@ -7,15 +7,25 @@ include('config.php');
 
 if(!empty($_SESSION['loggedin']) && !empty($_SESSION['username']))
 {
+<<<<<<< HEAD
      redirect("home.php");
+=======
+     redirect("home.php"); 
+>>>>>>> user_test
 }
 elseif(!empty($_POST['username']) && !empty($_POST['password']))
 {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
+<<<<<<< HEAD
 
     $checklogin = mysqli_query($conn, "SELECT * FROM tblusers WHERE UserName = '$username' AND Password = '$password'");
 
+=======
+     
+    $checklogin = mysqli_query($conn, "SELECT * FROM tblusers WHERE UserName = '$username' AND Password = '$password'");
+    
+>>>>>>> user_test
     if(mysqli_num_rows($checklogin) == 1)
     {
         //Prendre les informations dans la base de données pour la personne qui se connecte.

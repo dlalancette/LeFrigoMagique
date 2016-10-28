@@ -1,4 +1,4 @@
-<?php include ('header.php'); ?>
+<?php require('header.php'); ?>
 
 <div class="container" id="contact">
     <h1>NOUS CONTACTER </h1>

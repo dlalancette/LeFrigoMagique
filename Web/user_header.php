@@ -1,6 +1,7 @@
 <?php 
 session_start(); 
-require('config.php')
+require('config.php');
+require('functions.php');
 ?>
 <head>
     <meta charset="UTF-8" />
@@ -21,8 +22,6 @@ require('config.php')
 
 </head>
 <body> 
-    <!-- The justified navigation menu is meant for single line per list item.
-        Multiple lines will require custom code not provided by Bootstrap. -->
 <div class="masthead">
     <!--<h3 class="text-muted">Le Frigo Magique</h3>-->
     <nav class="navbar navbar-default navbar-static-top">
@@ -42,22 +41,24 @@ require('config.php')
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a class="navbar-brand" href="user.php"><?= $_SESSION['firstname']; ?></a>
+                        <a class="navbar-brand" href="user.php">Frigo de <?= $_SESSION['firstname']; ?></a>
                     </li>
 
                 </ul>
-                <!--Si pas connecter afficher les boutons insciption et connexion. 
-                    Si connecter afficher un menu dropdown avec les fonctionnailité inventaire, recette deconnexion, etc.
-                -->
                 <ul class="nav nav-tabs navbar-nav navbar-right">
                     <li>
-                        <a class="glyphicon glyphicon-cog" href="user_setting.php"></a>
+                        <a class="glyphicon glyphicon-cog" href="user_setting.php" data-toggle="tooltip" data-placement="bottom" title="Paramètres"></a>
                     </li>
                     <li>
-                        <a class="glyphicon glyphicon-log-out" href="logout.php"></a>
+                        <a class="glyphicon glyphicon-log-out" href="logout.php" data-toggle="tooltip" data-placement="bottom" title="Déconnexion"></a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.js"></script>
+            <script src="js/bootstrap.min.js"></script>
         </div><!-- /.container-fluid -->
     </nav>
 </div>
