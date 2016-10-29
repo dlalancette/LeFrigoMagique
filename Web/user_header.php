@@ -1,5 +1,4 @@
 <?php 
-session_start(); 
 require('config.php')
 ?>
 <head>
@@ -42,7 +41,7 @@ require('config.php')
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a class="navbar-brand" href="user.php"><?= $_SESSION['firstname']; ?></a>
+                        <a class="navbar-brand" href="home.php"><?= $_SESSION['firstname']; ?></a>
                     </li>
 
                 </ul>
