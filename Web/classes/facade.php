@@ -32,11 +32,10 @@ class facade
         $rowRec = mysqli_fetch_assoc($result);
 
         $recette = new recette($rowRec["IdRecipe"],
-                                $rowRec["NameRecipe"],
-                                $rowRec["Description"],
-                                facade::GetEtapeByRecetteId($conn, $recipeId),
-                                facade::GetIngrByRecipeId($conn, $recipeId));
-
+                               $rowRec["NameRecipe"],
+                               $rowRec["Description"],
+                               facade::GetEtapeByRecetteId($conn, $recipeId),
+                               facade::GetIngrByRecipeId($conn, $recipeId));
 
         utilities::utf8_encode_deep($recette);
 
@@ -55,6 +54,7 @@ class facade
         $rowsEtape = [];
         while($rowEtape = mysqli_fetch_array($lstEtape))
         {
+            utilities::utf8_encode_deep($rowEtape);
             $rowsEtape[] = new etape($rowEtape["IdStep"], $rowEtape["NumberStep"],
                                          $rowEtape["NameStep"], $rowEtape["Description"]);
         }
@@ -75,7 +75,7 @@ class facade
     {
 
 
-        $query = "SELECT R.IdRecipe, R.NameRecipe, R.Description
+        $query = "SELECT DISTINCT(R.IdRecipe), R.NameRecipe, R.Description
                                     FROM tblingredients I
                                     INNER JOIN tblingredientsrecipes IR
 	                                    ON IR.IdIngredient = I.IdIngredient
@@ -145,6 +145,7 @@ class facade
         $rowsIngr = [];
         while($rowIngr = mysqli_fetch_array($lstIngr))
         {
+            utilities::utf8_encode_deep($rowIngr);
             $rowsIngr[] = new ingredient($rowIngr["IdIngredient"], $rowIngr["NameIngredient"],
                                          $rowIngr["DaysFreezerMaxDuration"], $rowIngr["DaysFreezerMaxDuration"], $rowIngr["Quantity"] );
         }
