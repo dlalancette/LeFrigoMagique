@@ -39,7 +39,7 @@
 
             <div id="divSearchButton">
                 <input type="button" id="btnSearch" class="elem form-control" value="Rechercher" />
-                <h4 class="elem">Ou chercher à partir du frigo....</h4>
+                <h4 class="elem">Ou chercher � partir du frigo....</h4>
                 <input type="button" id="btnSearchFrigo" class="elem form-control" value="Frigo" />
             </div>
 
