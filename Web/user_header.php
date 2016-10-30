@@ -14,10 +14,14 @@ require('config.php')
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/dataTables.bootstrap.min.css" rel="stylesheet" />
     <link href="css/jumbotron-narrow.css" rel="stylesheet" />
-    <link href="navbar-static-top.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="css/Style2.css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.select2.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    
 </head>
 <body> 
     <!-- The justified navigation menu is meant for single line per list item.

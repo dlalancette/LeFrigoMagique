@@ -1,16 +1,30 @@
-﻿#container {
+﻿#container, .user {
     margin: 20px auto;
+    width:70%;
     position: relative;
 }
 
 #s2id_lstIngredients {
     margin: 0 auto;
-    width: 70% !important;
+    margin-bottom: 20px;
+    width:85% !important;
     display: block !important;
 }
 
 #signature {
     text-align:center;
+}
+
+.select2-container{
+    float: left;
+}
+
+.select2-container > ul {
+    height: 33px !important;
+}
+
+.select2-container > ul > li {
+    height: 28px !important;
 }
 
 .elem {
@@ -19,15 +33,30 @@
     text-align: center;
 }
 
-.elemHeader {
-    margin: 0 auto;
-    width: 70% !important;
-}
-
-#divSearchButton {
+.divSearchButton {
     text-align: center;
+    margin-bottom: 25px;
 }
 
-#divSearchButton > * {
+.divSearchButton > * {
     display: inline !important;
+}
+
+#datatableIngredients{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#btnSearch {
+    width: 10% !important;
+    background:url(../img/search.png) no-repeat center center;
+}
+
+#btnSearchFrigo {
+    width: 10% !important;
+    background:url(../img/fridge.ico) no-repeat center center;
+}
+
+.paginate_button {
+    margin-left: 5px;
 }
