@@ -1,0 +1,88 @@
+DELIMITER $$
+CREATE DEFINER=`id70286_gestionprojet2016`@`%` PROCEDURE `Proc_ConsulterIngredient`(IN `IN_IdIngredient` INT)
+    NO SQL
+BEGIN
+SELECT `tblIngredients`.*
+FROM `tblIngredientsRecipes`
+WHERE IdIngredient=IN_IdIngredient;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`id70286_gestionprojet2016`@`%` PROCEDURE `Proc_DeleteIngredient`(IN `IN_IdIngredient` INT)
+    NO SQL
+BEGIN
+DELETE FROM tblIngredients
+WHERE idIngredient=IN_IdIngredient;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`id70286_gestionprojet2016`@`%` PROCEDURE `Proc_AddRecipe`(IN `IN_NameRecipe` VARCHAR(30), IN `IN_Description` TEXT)
+    NO SQL
+BEGIN
+INSERT INTO tblRecipes
+(NameRecipe, Description) 
+VALUES
+(IN_NameRecipe,
+ IN_Description);
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`id70286_gestionprojet2016`@`%` PROCEDURE `Proc_ModifyIngredient`(IN `IN_NameIngredient` VARCHAR(50), IN `IN_DaysFreezerMaxDuration` SMALLINT(6), IN `DaysFridgeMaxDuration` SMALLINT(6))
+    NO SQL
+BEGIN
+UPDATE tblIngredients
+SET NameIngredient=IN_NameIngredient, DaysFreezerMaxDuration=IN_DaysFreezerMaxDuration, DaysFridgeMaxDuration=IN_DaysFridgeMaxDuration
+WHERE idIngredient=IN_IdIngredient;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`id70286_gestionprojet2016`@`%` PROCEDURE `Proc_DeleteRecipe`(IN `IN_IdRecipe` INT)
+    NO SQL
+BEGIN
+DELETE FROM tblSteps
+WHERE `tblSteps`.`IdRecipe`=IN_IdRecipe;
+DELETE FROM tblRecipes
+WHERE IdRecipe = IN_IdRecipe;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`id70286_gestionprojet2016`@`%` PROCEDURE `Proc_CreateIngredient`(IN `IN_NameIngredient` VARCHAR(50), IN `IN_DaysFreezerMaxDuration` SMALLINT(6), IN `IN_DaysFridgeMaxDuration` SMALLINT(6))
+    NO SQL
+BEGIN
+INSERT INTO tblIngredients
+(NameIngredient, DaysFreezerMaxDuration, DaysFridgeMaxDuration) 
+VALUES
+(IN_NameIngredient,
+ IN_DaysFreezerMaxDuration,
+ IN_DaysFridgeMaxDuration);
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`id70286_gestionprojet2016`@`%` PROCEDURE `Proc_ConsulterRecette`(
+ IN IN_IdRecette INT
+)
+BEGIN
+SELECT `tblIngredientsRecipes`.*, `tblRecipes`.*, `tblIngredients`.*, `tblSteps`.*
+FROM `tblIngredientsRecipes`
+LEFT JOIN `tblIngredients` ON `tblIngredientsRecipes`.`IdIngredient` = `tblIngredients`.`IdIngredient` 
+LEFT JOIN `tblRecipes` ON `tblIngredientsRecipes`.`IdRecipe` = `tblRecipes`.`IdRecipe` 
+LEFT JOIN `tblSteps` ON `tblRecipes`.`IdRecipe` = `tblSteps`.`IdRecipe` WHERE IdRecipe=IN_IdRecette;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`id70286_gestionprojet2016`@`%` PROCEDURE `Proc_ModifyRecipe`(IN `IN_IdRecipe` INT, IN `IN_NameRecipe` VARCHAR(30), IN `IN_Description` TEXT)
+    NO SQL
+BEGIN
+UPDATE tblRecipes
+SET NameRecipe = IN_NameRecipe,
+Description = IN_Description
+WHERE IdRecipe = IN_IdRecipe;
+END$$
+DELIMITER ;
